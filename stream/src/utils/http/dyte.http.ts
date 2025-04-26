@@ -1,10 +1,10 @@
-import { CONFIG } from "@/config/config";
+import { appConfig } from "@/config/app.config";
 import HttpClient from "./index.http";
 
 export const dyteHttpClient = new HttpClient({
-  baseURL: CONFIG.DYTE_BASE_URL,
+  baseURL: appConfig.dyteBaseUrl,
   timeout: 10000,
   headers: {
-    Authorization: CONFIG.DYTE_AUTH_HEADER,
+    Authorization: appConfig.dyteAuthHeader,
   },
 });

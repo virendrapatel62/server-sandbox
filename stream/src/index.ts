@@ -1,3 +1,3 @@
 import "dotenv/config";
-import "./config/config";
+import "./config/app.config";
 import "./server";
