@@ -8,11 +8,10 @@ const getOrThrow = (name: string) => {
   throw new RequiredEnvError(`${name} environment variable is required.`);
 };
 
-export const CONFIG = {
-  SERVER_PORT: getOrThrow("PORT"),
-
-  DYTE_BASE_URL: getOrThrow("DYTE_BASE_URL"),
-  DYTE_ORG_ID: getOrThrow("DYTE_ORG_ID"),
-  DYTE_API_KEY: getOrThrow("DYTE_API_KEY"),
-  DYTE_AUTH_HEADER: getOrThrow("DYTE_AUTH_HEADER"),
+export const appConfig = {
+  serverPort: getOrThrow("PORT"),
+  dyteBaseUrl: getOrThrow("DYTE_BASE_URL"),
+  dyteOrgId: getOrThrow("DYTE_ORG_ID"),
+  dyteApiKey: getOrThrow("DYTE_API_KEY"),
+  dyteAuthHeader: getOrThrow("DYTE_AUTH_HEADER"),
 };

@@ -21,12 +21,15 @@ const getMeetingHandler: RequestHandler = async (request, response) => {
 };
 
 const createMeetingHandler: RequestHandler = async (request, response) => {
-  const meetingBodyValidationSchema = yup.object().shape({
-    title: yup
-      .string()
-      .required("title is required")
-      .min(5, "title must be at least 3 characters long"),
-  });
+  const meetingBodyValidationSchema = yup
+    .object()
+    .required()
+    .shape({
+      title: yup
+        .string()
+        .required("title is required")
+        .min(5, "title must be at least 3 characters long"),
+    });
 
   try {
     const values = await meetingBodyValidationSchema.validate(request.body, {
