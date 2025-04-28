@@ -1,9 +1,11 @@
 import express, { Router } from "express";
-
-import { appConfig } from "./config/app.config";
 import { pingHandler } from "./handlers/ping.handlers";
 import { meetingRouter } from "./handlers/meetings.handlers";
 import morgan from "morgan";
+import { appConfig } from "config";
+
+const APP_NAME = "stream";
+const SERVER_PORT = appConfig.streamServerPort;
 
 const app = express();
 app.use(morgan("dev"));
@@ -21,8 +23,8 @@ apiRouter.use("/api/meetings", meetingRouter);
 
 app.use(apiRouter);
 
-app.listen(appConfig.serverPort, () => {
-  console.log(`Server running on port ${appConfig.serverPort}`);
+app.listen(SERVER_PORT, () => {
+  console.log(`${APP_NAME} server running on port ${SERVER_PORT}`);
 });
 
 export { app };

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // The base URL is the root of the project
+    "paths": {
+      "@/*": ["src/*"], // Resolve '@config' to 'projects/config/src'
+      "@config": ["projects/config/"] // Resolve '@config' to 'projects/config/src'
+    },
+    "target": "ES2020",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["src/**/*", "projects/**/*"], // Include both 'src' and 'projects' folders
+  "exclude": ["node_modules", "dist"]
+}

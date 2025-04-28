@@ -1,4 +1,4 @@
-import { appConfig } from "@/config/app.config";
+import { appConfig } from "config";
 import HttpClient from "./index.http";
 
 export const dyteHttpClient = new HttpClient({

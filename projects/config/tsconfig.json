@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json", // Inherit settings from the root tsconfig
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "declaration": true,
+    "module": "commonjs",
+    "esModuleInterop": true
+  },
+  "include": ["./src/**/*"], // Include all files in the 'src' directory
+  "exclude": ["node_modules", "dist"],
+  "files": ["src/index.ts"]
+}
