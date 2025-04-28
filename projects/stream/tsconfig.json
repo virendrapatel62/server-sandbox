@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.json", // Extend root tsconfig
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist", // Output directory for transpiled code
+    "rootDir": "./src" // Root directory for source files
+  },
+  "include": ["src/**/*"],
+  "references": [
+    {
+      "path": "../config" // This tells TypeScript that 'config' is a dependency of 'stream'
+    }
+  ]
+}
